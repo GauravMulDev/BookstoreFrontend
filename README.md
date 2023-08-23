@@ -105,6 +105,7 @@ The main React components of the app include:
    
  REACT_APP_BACKEND_URL=http://host:port
 MONGODB_URI='mongodb://host:port/bookstore'
+- nvm use v16
 
 # Improvements for Bookstore App: React Frontend
 
