@@ -1,0 +1,9 @@
+.fourStarContainer {
+  display: flex;
+  align-items: center;
+}
+
+.fourStarDisplay {
+  display: flex;
+  overflow: hidden;
+}
