@@ -107,6 +107,11 @@ The main React components of the app include:
  - MONGODB_URI='mongodb://host:port/bookstore'
  - SKIP_PREFLIGHT_CHECK=true
 -   nvm use v16
+  
+7. **NOTE**:
+   - Use **username = adminTera** and **password=Gloaster@areT** (hardcoded) for login into admin module for import a collection and dump data.
+   - To Import data into a collection please provide dbname and collection name. To create collection and import provide db name only.
+   - To Dump data and download just pass dbname.
 
 # Improvements for Bookstore App: React Frontend
 
