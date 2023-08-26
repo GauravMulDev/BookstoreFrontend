@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useEffect} from "react";
+import { useLocation } from "react-router-dom";
 import {
   TextField,
   Paper,
@@ -10,7 +11,23 @@ import {
   Box
 } from "@mui/material";
 
-const SearchBar = ({ filters, onFilterChange, onSearch }) => (
+const SearchBar = ({ filters, onFilterChange, onSearch }) => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Reset filters when route changes
+    onFilterChange('title', '');
+    onFilterChange('author', '');
+    onFilterChange('rating', '');
+    onFilterChange('minPrice', '');
+    onFilterChange('maxPrice', '');
+
+    // Optionally, you can also trigger a search whenever filters are reset
+    // onSearch();
+
+  }, [location.pathname!=='/']);
+  return(
   <Paper style={{ padding: "1rem", margin: "1rem 0" }}>
     <Box display="flex" justifyContent="space-between" flexWrap="nowrap">
       <TextField
@@ -70,6 +87,6 @@ const SearchBar = ({ filters, onFilterChange, onSearch }) => (
       </Button>
     </Box>
   </Paper>
-);
+);}
 
 export default SearchBar;
