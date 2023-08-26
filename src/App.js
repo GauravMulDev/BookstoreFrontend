@@ -115,7 +115,7 @@ function App() {
     setFilters(prev => ({ ...prev, [key]: value }));
   };
   const token = localStorage.getItem("jwtToken");
-  useEffect(() => {
+ useEffect(() => {
     async function fetchData() {
       setIsLoading(true);
 
@@ -124,16 +124,19 @@ function App() {
 
         try {
           const booksData = await fetchBooks('1', '9', token); 
+       
           setBooks(booksData);
         } catch (error) {
-      
+    
         } finally {
           setIsLoading(false); 
         }
       }
     }
-    fetchData();
-  }, [filters, token]);
+    if (location.pathname !== '/login') {
+      fetchData();
+    }
+  }, [filters, token,location.pathname]);
 
   const handleAddToCart = book => {
     setCartItems(prevItems => {
