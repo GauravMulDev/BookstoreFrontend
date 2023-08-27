@@ -133,7 +133,7 @@ function App() {
         }
       }
     }
-    if (location.pathname !== '/login') {
+    if (location.pathname !== '/login' && location.pathname !== '/signup') {
       fetchData();
     }
   }, [filters, token,location.pathname]);
