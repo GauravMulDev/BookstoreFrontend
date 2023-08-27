@@ -48,8 +48,8 @@ The main React components of the app include:
 - **Eject from Create React App**: `npm run eject`
   - This will remove the single build dependency from your project.
 
-> **Note**: Ejecting is a one-way operation. Once you eject, you can't go back!
-
+> **Note**: - Please make sure that you are adding .env file at the right path which is outside of src.
+>           - Install all dependencies and use the command npm use v16
 ---
 
 ## 📚 Key Dependencies
